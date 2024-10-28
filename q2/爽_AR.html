@@ -243,7 +243,7 @@ input[type="text"]:focus {
 <body>
     <div class="container">
         <img src="kado.png" alt="花の模様" class="kado kado-top-right">
-        <img src="第3関門.png" alt="第三関門" class="title">
+        <img src="第2関門.png" alt="第二関門" class="title">
         <br>
         <div class="text-box">    
             <form id="quiz-form">
@@ -267,7 +267,7 @@ input[type="text"]:focus {
                 const resultImage = document.getElementById("result-image");
                 const overlay = document.getElementById("overlay");
 
-                const correctAnswers = ["図書室","としょしつ","トショシツ"];
+                const correctAnswers = ["ステージ","すてーじ"];
 
                 form.addEventListener("submit", function(event) {
                     event.preventDefault();
@@ -294,13 +294,13 @@ input[type="text"]:focus {
         <div class="hint-card" onclick="flipCard(this)">
             <div class="hint-card-inner">
                 <div class="hint-front"></div>
-                <div class="hint-back">絵に<br>　注目してみよう</div>
+                <div class="hint-back">身近に<br>使っているもの</div>
             </div>
         </div>
         <div class="hint-card" onclick="flipCard(this)">
             <div class="hint-card-inner">
                 <div class="hint-front" style="background-image: url('hint3.png'); background-size: cover;"></div>
-                <div class="hint-back">　むし　ば</div>
+                <div class="hint-back">スマホに<br>隠されている</div>
             </div>
         </div>
     </div>
