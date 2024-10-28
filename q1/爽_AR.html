@@ -189,6 +189,7 @@
             }
             .hint-back {
                 font-size: 14px;
+                writing-mode: vertical-rl;
             }
             .hint-text {
                 gap: 90px;
@@ -266,12 +267,12 @@ input[type="text"]:focus {
                 const resultImage = document.getElementById("result-image");
                 const overlay = document.getElementById("overlay");
 
-                const correctAnswer = "正解";
+                const correctAnswers = ["ハムカツ","はむかつ","ハムかつ","hamukatsu"];
 
                 form.addEventListener("submit", function(event) {
                     event.preventDefault();
                     const userInput = input.value.trim();
-                    if (userInput === correctAnswer) {
+                    if (correctAnswers.includes(userInput)) {
                         resultImage.src = "画像1.png";
                         resultImage.alt = "clear!";
                     } else {
@@ -293,13 +294,13 @@ input[type="text"]:focus {
         <div class="hint-card" onclick="flipCard(this)">
             <div class="hint-card-inner">
                 <div class="hint-front"></div>
-                <div class="hint-back">ヒント1</div>
+                <div class="hint-back">文字に<br>注目してみよう</div>
             </div>
         </div>
         <div class="hint-card" onclick="flipCard(this)">
             <div class="hint-card-inner">
                 <div class="hint-front" style="background-image: url('hint3.png'); background-size: cover;"></div>
-                <div class="hint-back">ヒント2</div>
+                <div class="hint-back">矢印の方向に<br>注目してみよう</div>
             </div>
         </div>
     </div>
